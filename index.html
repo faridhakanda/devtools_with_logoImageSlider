@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Tools Learning!</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Developer Tools!</h1>
+        <h3>And thanks for suggest this, <span id="notes"></span></h3>
+        <input type="text" placeholder="enter your suggestion" id="suggestion">
+        <button id="submit">Submit</button>
+    </div>
+    <script>
+        var sumit = document.getElementById("#submit");
+        console.log(submit);
+        console.dir(submit);
+       
+        // console.log('Hello, World!');
+        // console.group("group1");
+        //     console.log("javascript")
+        //     console.log("python")
+        //     console.log("Nextjs");
+        //     console.log("Django");
+        //     var count = 0;
+        //     var submit = document.querySelector("#submit");
+        //     submit.addEventListener('click', function(event) {
+        //         var value = document.getElementById("suggestion").value;
+        //         if (value === 'farid akanda') {
+        //             document.getElementById("notes").innerHTML = "your not approved!";
+        //         } else {
+        //             document.getElementById("notes").innerHTML = value;
+        //         }
+        //         console.log(value);
+        //     });
+        // console.groupEnd("group1");
+        // console.group("group2");
+        //     console.log("nextjs");
+        //     console.log("django");
+        //     console.log("python");
+        // console.groupEnd("group2");
+        
+        // true and false checking
+        // var x = true;
+        // if (x) {
+        //     console.log(x);
+        // } else {
+        //     console.error(x);
+        // }
+
+        // var w = false;
+        // if (w) {
+        //     console.log(w);
+        // } else {
+        //     console.warn(w);
+        // }
+
+        // console.time("loopTiming");
+        // for (var i = 0; i < 100000; i++) {
+        //     console.log("hello, Javascript!");
+        // }
+        // console.timeEnd("loopTiming");
+
+
+        var employee = [
+            {name: "Joy", skill: "Javascrit"},
+            {name: "Nuri", skill: "Python, C/C++, Java"},
+            {name: "Anik", skill: "Java, Svelt"}
+        ];
+        console.table(employee);
+    </script>
+</body>
+</html>

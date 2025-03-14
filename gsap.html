@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            display: block;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 300px;
+            height: 300px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #D1F2EB;
+            position: relative;
+            display: flex;
+        }
+        .box1, .box2, .box3, .box4, .box5, .box6 {
+            width: 50px;
+            height: 50px;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            position: absolute;
+        }
+        .box1 {
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-color: #21618C;
+        }
+        .box2 {
+            top: 0;
+            right: 0;
+            position: absolute;
+            background-color: #212F3C;
+        }
+        .box3 {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background-color: #21618C;
+        }
+        .box4 {
+            bottom: 0;
+            right: 0;
+            
+            background-color: #E74C3C;
+        }
+        
+        .box5 {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: green;
+        }
+        .box6 {
+            background-color: green;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+            align-content: center;
+        }
+        .box7 {
+            width: 100px;
+            height: 50px;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            position: absolute;
+            top: 76px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: #21618C;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        
+    </div>
+    <h1>Hello</h1>
+    <script>
+        function Animation() {
+            gsap.set(".box1, .box2, .box3, .box4, .box5, .box6, .box7", {x: 0, y: 0, duration: 1, rotate: 0});
+            
+            // box1 run rotated way in x coordinate
+            // 100 position
+            gsap.to(".box1", {
+                x: 100,
+                duration: 1,
+                rotate: 360,
+            });
+            // box2 run rotated way anti clockwise 
+            // and come to 100 position inverse x axis
+            gsap.to(".box2", {
+                x:  -100,
+                duration: 1,
+                rotate: -360,
+            });
+            // here box3 rotate anti-clockwise
+            // and climb up
+            gsap.to(".box3", {
+                y: -100,
+                duration: 1,
+                rotate: -360,
+            });
+            // box4 rotate clockwise and 
+            // climb up
+            gsap.to(".box4", {
+                y: -100,
+                duration: 1,
+                rotate: 360
+            });
+            // box5 rotate in here place
+            // and wait box6 meet
+            gsap.to(".box5", {
+                
+                duration: 1,
+                rotate: 360,
+                
+            });
+            // here box6 climb up for 
+            // meet box5
+            gsap.to(".box6", {
+                y: -76,
+                duration: 1,
+            });
+            // here box7 climb up 30px
+            // for meet together box1 and box2
+            gsap.to(".box7", {
+                y: -30,
+                duration: 1,
+            })
+        }
+        // after every 2sec the animation execute again and again
+        setInterval(Animation, 2000);
+    </script>
+</body>
+</html>
